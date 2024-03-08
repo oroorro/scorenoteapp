@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState, useRef, useEffect } from "react";
 import './App.css';
-
+import Day from './Day';
+import Todo from './Todo';
 function App() {
+
+  const [createdList,setCreatedList] = useState();
+
+
+  
+  useEffect(()=>{
+  
+    console.log("herwe", createdList);
+},[createdList])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Day createdList={createdList} setCreatedList={setCreatedList}/>
+      <Todo setCreatedList={setCreatedList}/>
     </div>
   );
 }

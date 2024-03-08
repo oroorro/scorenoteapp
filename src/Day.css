@@ -1,0 +1,24 @@
+
+
+.dayWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.dayName{
+    width: 200px;
+    height: 100px;
+    background-color: beige;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.table>div{
+    width: 200px;
+    height: 60px;
+    background-color: tomato;
+}
